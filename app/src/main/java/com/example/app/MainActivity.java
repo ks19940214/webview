@@ -25,6 +25,9 @@ public class MainActivity extends Activity {
 
 
         // LOCAL RESOURCE
+        webView.setWebViewClient(new WebViewClient());
+webView.setWebChromeClient(new WebChromeClient());
+webView.loadUrl("http://192.168.130.88:8080");
         // mWebView.loadUrl("file:///android_asset/index.html");
     }
 
