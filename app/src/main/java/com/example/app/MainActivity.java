@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.webkit.WebChromeClient;
 
 public class MainActivity extends Activity {
 
@@ -18,17 +20,9 @@ public class MainActivity extends Activity {
         mWebView = findViewById(R.id.activity_main_webview);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mWebView.setWebViewClient(new MyWebViewClient());
-
-        // REMOTE RESOURCE
+        mWebView.setWebViewClient(new WebViewClient());
+        mWebView.setWebChromeClient(new WebChromeClient());
         mWebView.loadUrl("http://192.168.130.88:8080");
-
-
-        // LOCAL RESOURCE
-        webView.setWebViewClient(new WebViewClient());
-webView.setWebChromeClient(new WebChromeClient());
-webView.loadUrl("http://192.168.130.88:8080");
-        // mWebView.loadUrl("file:///android_asset/index.html");
     }
 
     @Override
