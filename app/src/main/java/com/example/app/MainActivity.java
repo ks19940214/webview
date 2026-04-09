@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient());
         mWebView.setWebChromeClient(new WebChromeClient());
-        mWebView.loadUrl("http://192.168.130.88:8080");
+        mWebView.loadUrl("http://192.168.20.7:8080");
     }
 
     @Override
